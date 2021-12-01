@@ -1,0 +1,61 @@
+@media only screen and (max-width:1100px){
+    .photo__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo-text__container{
+        text-align: center;
+        margin:54px 0 50px 0;
+    }
+    .photo_img{
+        margin:40px auto;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .galery__photo{
+        margin-top: 300px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .header{
+        min-height: 900px;
+    }
+
+    .gallery{
+        height: 700px;
+    }
+
+    .phone-memu{
+        display: block;
+    }
+
+    .navbar__menu{
+        display: none;
+    }
+
+    .gallery-text__container{
+        padding-top: 166px;
+    }
+    
+    .galery__photo{
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .footer{
+        height: 808px;
+    }
+    .footer__text{
+        margin-top:166px;   
+    }
+}
+
+@media only screen and (max-width:397px){
+    .galery__photo{
+        margin-top: 150px;
+    }
+}

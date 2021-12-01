@@ -1,0 +1,382 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+@font-face {
+    font-family: outrunfuture;
+    src: url("fonts/Outrun future Bold Italic.otf");
+    src: url("fonts/Outrun future Bold.otf");
+    src: url("fonts/Outrun future.otf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+.wrapper{
+    position: relative;
+}
+
+.w__img{
+    position: absolute;
+    z-index: 110;
+    width: 100%;
+    height: 100%;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    background:transparent;
+    border:none;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.__titel{
+    font-family: outrunfuture;
+    font-size: 60px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.__text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+}
+
+/*Burger-menu*/
+
+.phone-memu{
+    display: none;
+    position: relative;
+    z-index: 100000;
+    padding: 40px 40px 0 0;
+}
+
+.header__menu{
+    display: flex;
+    justify-content: right;
+}
+
+.menu-btn {
+    border: solid 2px #95a7ff; 
+    padding: 10px;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+}
+
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #95a7ff;
+	transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+    opacity: 0.8;
+	background-color: #ff4e3e;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+}
+
+.menu nav{
+    margin-top: 90px;
+}
+
+.menu.active {
+	transform: translateX(0);
+}
+
+.menu li {
+	list-style-type: none;
+    margin-top: 20px;
+}
+
+.phone__link{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.menu-btn.active span:first-of-type {
+	transform: translateX(100%);
+}
+
+.menu-btn.active span:nth-of-type(2) {
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*-----------------header----------------------------*/
+
+.header{
+    background: url(img/header_bg.png);
+    min-height: 1125px;
+    text-align: center;
+}
+
+.navbar__menu{
+    display: flex;
+    justify-content: center;
+    padding-top: 134px;
+}
+
+.menu__item{
+    margin: 0 25px 0 25px;
+    font-family: outrunfuture;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu__item:hover{
+    background:url(img/hover_menu.png) center center no-repeat ;
+}
+
+.header__titel{
+    margin: 180px auto;
+    background-size: cover; 
+}
+
+.Header__btn{
+    margin-top: 98px;
+}
+
+.header_btn-link{
+    padding: 10px 63px 10px 63px;
+    background:url(img/button.png) center center no-repeat;
+    font-family: outrunfuture;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    position: relative;
+    z-index: 10000;
+    color: #000000;
+}
+
+.header_btn-link:hover{
+    transition: 0.5s;
+    transform: skewX(20deg);
+}
+
+/*-----------------photo----------------------------*/
+
+.photo{
+    background: url(img/photo_bg.png) black center center; 
+    min-height: 917px;
+}
+
+.photo__container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.photo-text__container{
+    margin:284px 0 0 20px;
+}
+
+.photo_img{
+    margin-top: 152px;
+}
+
+.photo_span{
+    font-family: outrunfuture;
+    font-size: 24px;
+    font-weight: 400;
+    color: #95a7ff;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    from {
+        color: #95a7ff;
+    }
+    50% {
+        color: #ff4e3e;
+    }
+    to {
+        color: #95a7ff;
+    }
+}
+
+.photo_titel{
+    margin-top: 35px;
+}
+
+.photo_text{
+    margin-top: 63px;
+}
+
+/*-----------------gallery----------------------------*/
+
+.gallery{
+    background: url(img/galery.png) black center center ;
+    height: 867px;
+}
+
+.gallery-text__container{
+    padding-top: 266px;
+    text-align: center;
+}
+
+.gallery_text{
+    margin-top: 63px;
+}
+
+.galery__photo{
+    margin-top: 239px;
+    display: flex;
+}
+
+.gallery_link{
+    cursor:pointer;
+    z-index: 100000;
+}
+
+.gallery_link:hover{
+    transform: scale(1.1, 1.1);
+    border:solid 5px #ff4e3e;
+    z-index: 1000001;
+}
+
+
+.slide4{
+    filter: brightness(50%)
+}
+
+/*-----------------footer----------------------------*/
+
+.footer{
+    background: url(img/footer.png) black;
+    height: 908px;
+    text-align: center;
+}
+
+.footer__titel{
+    padding-top: 332px;
+}
+
+.f__btn{
+    position: relative;
+    z-index: 1000;
+    margin-top: 50px;
+    background:url(img/button.png);
+    width: 247px;
+    height: 53px;
+    font-family: outrunfuture;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ff4e3e;
+}
+
+.f__btn:hover{
+    transform: rotate(720deg);
+    transition: 1s;
+}
+
+.footer__text{
+    margin-top: 266px;
+}
+
+.footer_span{
+    font-family: outrunfuture;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #313131;
+}
